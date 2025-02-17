@@ -161,7 +161,7 @@ trait RegistersUsers
             $password = $request->has($this->paramPassword)?$request[$this->paramPassword]:null;
         }// End if            
 
-        return app()->make(AwsCognitoClient::class)->inviteUser(
+        return app()->make(AwsCognitoClient::class)->register(
             $request[$userKey], $password, $attributes,
             $clientMetadata, $messageAction,
             $groupname
