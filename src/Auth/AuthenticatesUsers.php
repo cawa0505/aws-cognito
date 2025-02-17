@@ -233,7 +233,7 @@ trait AuthenticatesUsers
             } elseif ($exception instanceof ValidationException) {
                 throw $exception;
             } else {
-                $errorCode = $exception->getStatusCode();
+                $errorCode = $exception->getCode();
                 $message = $exception->getMessage();
             } //End if
         } //End if
